@@ -20,6 +20,7 @@ return new class extends Migration
             $table->enum('type_user', ['seller', 'client']);
             $table->rememberToken();
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

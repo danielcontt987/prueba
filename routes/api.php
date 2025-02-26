@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ProductController;
 use App\Http\Controllers\StoreController;
 use App\Http\Controllers\UserController;
 use Illuminate\Http\Request;
@@ -25,3 +26,20 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 Route::post('/register', [UserController::class, 'register']);
 Route::post('/login', [UserController::class, 'login']);
 Route::post('/logout', [UserController::class, 'logout']);
+
+//Vendedor
+
+Route::prefix('seller')->group(function(){
+    Route::post('/store/list', [StoreController::class, 'list']);
+    Route::post('/store/get', [StoreController::class, 'get']);
+    Route::post('/store/create', [StoreController::class, 'create']);
+    Route::post('/store/delete', [StoreController::class, 'delete']);
+    Route::post('/store/update', [StoreController::class, 'update']);
+
+    Route::post('/product/list', [ProductController::class, 'list']);
+    Route::post('/product/get', [ProductController::class, 'get']);
+    Route::post('/product/create', [ProductController::class, 'create']);
+    Route::post('/product/delete', [ProductController::class, 'delete']);
+    Route::post('/product/update', [ProductController::class, 'update']);
+
+})->middleware('auth:api');
