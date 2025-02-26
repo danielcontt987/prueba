@@ -49,4 +49,5 @@ Route::prefix('seller')->group(function(){
 Route::prefix('client')->group(function(){
     Route::post('/cart', [CartClientController::class, 'addToCart']);
     Route::post('/remove', [CartClientController::class, 'revomeToCart']);
+    Route::post('/checkout', [CartClientController::class, 'checkout']);
 })->middleware('auth:api');
