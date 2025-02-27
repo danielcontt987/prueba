@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\CartClientController;
+use App\Http\Controllers\HistorialController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\StoreController;
 use App\Http\Controllers\UserController;
@@ -42,6 +43,9 @@ Route::prefix('seller')->group(function(){
     Route::post('/product/create', [ProductController::class, 'create']);
     Route::post('/product/delete', [ProductController::class, 'delete']);
     Route::post('/product/update', [ProductController::class, 'update']);
+    Route::post('/historical', [HistorialController::class, 'sellerByStore']);
+
+    
 
 })->middleware('auth:api');
 
@@ -50,4 +54,5 @@ Route::prefix('client')->group(function(){
     Route::post('/cart', [CartClientController::class, 'addToCart']);
     Route::post('/remove', [CartClientController::class, 'revomeToCart']);
     Route::post('/checkout', [CartClientController::class, 'checkout']);
+    Route::post('/historical', [HistorialController::class, 'client']);
 })->middleware('auth:api');

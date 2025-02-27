@@ -16,4 +16,9 @@ class Order extends Model
         'cart_id',
         'total',
     ];
+
+    public function historicals()
+    {
+        return $this->hasMany(OrderItem::class, 'order_id', 'id');
+    }
 }
