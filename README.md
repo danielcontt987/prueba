@@ -83,3 +83,5 @@ estoy usuando la versión 8.2.12 de php y laravel 10
 si causa un error al instalar composer install con composer update y si no es debes de habilitar la extesion extension=sodium estará asi ;extension=sodium solo se quita el punto y coma este archivo de encuentra en C:\xampp\php y se llama php.ini
 
 despues se corre php artisan migrate, php artisan passport:install y php artisan serve
+
+y por ultimo hay un postman con los endpoints se llama Prueba Tecnica.postman_collection.json y ERD-Extendido.pdf
