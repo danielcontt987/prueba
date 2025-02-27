@@ -64,3 +64,22 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+## Como ingresar al proyecto notas
+
+Se ocupara modificar el .env de en las variable de 
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3307
+DB_DATABASE=stores
+DB_USERNAME=root
+DB_PASSWORD=root
+
+para ejecutar el proyecto es
+
+composer install
+estoy usuando la versión 8.2.12 de php y laravel 10
+
+si causa un error al instalar composer install con composer update y si no es debes de habilitar la extesion extension=sodium estará asi ;extension=sodium solo se quita el punto y coma este archivo de encuentra en C:\xampp\php y se llama php.ini
+
+despues se corre php artisan migrate, php artisan passport:install y php artisan serve

@@ -1,0 +1,1062 @@
+{
+	"info": {
+		"_postman_id": "011d6e9b-e198-42de-af18-53bc3d7c95c3",
+		"name": "Prueba Tecnica",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "14377726"
+	},
+	"item": [
+		{
+			"name": "Registrar usuario",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "Jose Daniel",
+							"description": "Nombre del usuario",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "jose@gmail.com",
+							"description": "correo electronico de usuario",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "password123",
+							"description": "contraseña",
+							"type": "text"
+						},
+						{
+							"key": "type_user",
+							"value": "seller",
+							"description": "tipo de usuario \"client o seller\"",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/register",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"register"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login Usuarios",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "jose@gmail.com",
+							"description": "correo electronico de usuario",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "password123",
+							"description": "contraseña",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/login",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"login"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Logout",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "jose_daniel15@gmail.com",
+							"description": "correo electronico de usuario",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "password123",
+							"description": "contraseña",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/logout",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"logout"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Crear tienda vendedor",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiMzYwNmJhMmZkMmQyYzdkYmE2YmM0OGYxMTlhMzI3OWIyZDllMjViOTBjMWQ0ZDgxYzFlZGE1Zjk5MzZhNzQzNzc1YmE4YWY5MDBmNmRkNDIiLCJpYXQiOjE3NDA2MTA5MDcuNzQ2NDgxLCJuYmYiOjE3NDA2MTA5MDcuNzQ2NDg0LCJleHAiOjE3NzIxNDY5MDcuNzM2NjgzLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.jjrsvuaQBrUXV-LAJ27wHsae6o7DyWDu5wvxyyabBaFlVxpIlsgpsm0Kodgq8SWtTm0-IFgvstTtFqXCUAA28y0fUaK-L9pqnum4putRq-5wiL3NkkItk2V7mPRb2tL1TcvTm68IJIupat9KANDIAhAlGCABLcSZUFOXP6Vet4YW7_SZhlsuFO2ePgyXW-7oMuvhtLQcNDxdQSnUAwzEu2aKQKR-11UU3uOJwx_9FnT13YTsEAUbtmkGmPPEHPDrF0ivb7BX5doTwfyKcsBqtvskS63VQUxSH2_dwRla70kEYBBkwdCr1mDkZBQUjb9oJ38tzrlJ-7WkUS99flDagupzilfzio7SJPO3WMrB1KJQHYEdIXsXh74TjCC_MA8WUjx4kPDsAekrEhK9w8gBVtA7vfrBQVU3Fc7xdIoDSz8FxSR0WqVGH2RYkWHWvoqu1ZjftWYGFA5UQWnJDpkh_w3bzpkGWTJzjVcaSxYSYhuDXjvGe-0q0jTeMAYyOlQrAOjjKDlvLsqPN6JRkAV_6aiplQtV3dtT0MSnaSfRQp2Bn1HE7g9YMLiOISjVDusP8P2k345bCXkHvkUDLKdQPQTrI7cekDvSJWQiv7mj5kMnt8QVOyfMV3YIp46oBZeXgHvEdQPaAl5d5GeDug96ood6WTMzOHVlLFOFBl2O6L0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "OXXO",
+							"description": "correo electronico de usuario",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "password123",
+							"description": "contraseña",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/seller/store/create",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"seller",
+						"store",
+						"create"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Editar tienda vendedor",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiOWMyYjg3ZjMyMmZmYWUwYzk1NDcwYzcyZGJhMDVmOWI4MjdjMTM4ZjhhOGIyYzk5MTQxOTIyYjBiYjI0NDcxY2VhMDY3ZjU4NmM5ODQyMzYiLCJpYXQiOjE3NDA2MDEzNDUuMjMwMjg3LCJuYmYiOjE3NDA2MDEzNDUuMjMwMjg5LCJleHAiOjE3NzIxMzczNDUuMjIyMjA1LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.HkiLQoc292pouBD55ynM2Zl-wg6gsJmBI5lM72EFaGyrpCfAareofPrRLUHshDofpqulisTvmvind9GIFWk7M5ECmoh-BClE7ZPzI6YfQsDmUgiCD0dN-osQsBOsDgbJivPgs_8OVu3gB6tgrAl1fM5WkmSwHL5JdHCu4hgA4ja4kw7ISTB3DPLuTNb2YO9jXPiauXyGa_IRCucSJb0H0UQxWTYdwJrhVfymppFwt3kHjcnhpSuv4W6sPulaK24w2yGWQ_0lv98JOELmscL8fA-utfxWBHs8BlsednpTNo43c4Svb0OAcaJ7jMkSssLGDyVh6pe3E23KMd8lJtYcRIqhy6FRZ5DxcNA5oQKRLFMvM6Y3z8geXTErGKiX6TdY0ka8I6fJ10FQf9VK_WmUclmq-xkyR1QdKM5F1LCpnAPw1sVPQgZDmGg7gQPf_ofVwdlveyfQfoaexfaKKaD_2soI-jABUbbJu_zdwPcLKNlVSDTkrhnCklLMNibThayh3_148Q5gtnsn1ipP891NDn23Mgy85MirM3GdFd0E7AjC8uJTi4wZ2iMwS8p9dW4qgk27QdLkjQZhW0sbUaYdmUU5Qm50ci4RiKdUYQvNALIyrurg571YVjlLU3ZzJ5rV5zvMSqSVXIrH9w6hmZFVd5_0z6Nqk5kw9-K0yD2Uhrk",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "Kiosco",
+							"description": "correo electronico de usuario",
+							"type": "text"
+						},
+						{
+							"key": "id",
+							"value": "1",
+							"description": "contraseña",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/seller/store/update",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"seller",
+						"store",
+						"update"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Eliminar tienda vendedor",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiOWMyYjg3ZjMyMmZmYWUwYzk1NDcwYzcyZGJhMDVmOWI4MjdjMTM4ZjhhOGIyYzk5MTQxOTIyYjBiYjI0NDcxY2VhMDY3ZjU4NmM5ODQyMzYiLCJpYXQiOjE3NDA2MDEzNDUuMjMwMjg3LCJuYmYiOjE3NDA2MDEzNDUuMjMwMjg5LCJleHAiOjE3NzIxMzczNDUuMjIyMjA1LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.HkiLQoc292pouBD55ynM2Zl-wg6gsJmBI5lM72EFaGyrpCfAareofPrRLUHshDofpqulisTvmvind9GIFWk7M5ECmoh-BClE7ZPzI6YfQsDmUgiCD0dN-osQsBOsDgbJivPgs_8OVu3gB6tgrAl1fM5WkmSwHL5JdHCu4hgA4ja4kw7ISTB3DPLuTNb2YO9jXPiauXyGa_IRCucSJb0H0UQxWTYdwJrhVfymppFwt3kHjcnhpSuv4W6sPulaK24w2yGWQ_0lv98JOELmscL8fA-utfxWBHs8BlsednpTNo43c4Svb0OAcaJ7jMkSssLGDyVh6pe3E23KMd8lJtYcRIqhy6FRZ5DxcNA5oQKRLFMvM6Y3z8geXTErGKiX6TdY0ka8I6fJ10FQf9VK_WmUclmq-xkyR1QdKM5F1LCpnAPw1sVPQgZDmGg7gQPf_ofVwdlveyfQfoaexfaKKaD_2soI-jABUbbJu_zdwPcLKNlVSDTkrhnCklLMNibThayh3_148Q5gtnsn1ipP891NDn23Mgy85MirM3GdFd0E7AjC8uJTi4wZ2iMwS8p9dW4qgk27QdLkjQZhW0sbUaYdmUU5Qm50ci4RiKdUYQvNALIyrurg571YVjlLU3ZzJ5rV5zvMSqSVXIrH9w6hmZFVd5_0z6Nqk5kw9-K0yD2Uhrk",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "id",
+							"value": "1",
+							"description": "contraseña",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/seller/store/delete",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"seller",
+						"store",
+						"delete"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar tiendas vendedor",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiYmRjMTk2ZDUzYzU0ZGEzODJiMGM2ODJlNjVkNDM3ZGJhOTEzOWQxNGQwNWUzMDJjZDBiYjc2ZjBkM2U0MzVhM2EzM2ViZjRhNzdlN2UxZGUiLCJpYXQiOjE3NDA2MDI2MjAuOTQxNTc2LCJuYmYiOjE3NDA2MDI2MjAuOTQxNTc5LCJleHAiOjE3NzIxMzg2MjAuOTM1NzU5LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.cQxWPGNtVoqmD_jZ1lWusUu2QRbtSrtHTpQgKwCEWH6v5yPqY3JDsH1jidV8a1_7CaXQ-2xPh9Qc2ybNUUc7jR3xb84Nx0Hq5ADy23OaQcTQQVyJnEzgqERGgefGnS8XE1_7kIgLVQaLlyzL9e88fRkONzKbe9yAU5DR-HuB812pdFEYfOaH8jCTTL1CqjOCjPvVjTVEGa3G6QA51R2uWGuGWUoplbyCWAvO2L_7dezBH871BKAySz0HLXdAdkr5Z-0vu0t1_qL1IhQlSERTMCbE2yznS9qfPh78hJFTLqmIvxtTvK6KbR3L1I56njYjz_ptjlF6qzH0rnFiPkFtXQDZOk_ZYFgj55B0pYUxgHPKZ2p1hTAe17Fws6rfgWMIUl9i1tcgWZcwih-kmQuIt4uQ3imVvCJXTSPtRtk_kaf_IrVTgByDbxDgeBWoVkLtA62u2KGmqd2B6IgdDJapa7ZY7uVNUXEIkvfaEaShxx7z17-_7vvSeQaRJPu8eWWgNuqysQD7rHMDxL2o8MW7vNxQLLnB776oUpSsI0AyvCvqtQf50qGqL6Ts8WNhWKLBqHsjwFLPA2IXcfAONdCok0u3S3-z7j1JSazTiZLbUjb4N-uYvGFiMKu_0v52WtYZ-mZeZ5YACmiNB_3dOJVGyMMZHA4hBqH8TkLME2nr794",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "user_id",
+							"value": "1",
+							"description": "contraseña",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/seller/store/list",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"seller",
+						"store",
+						"list"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Obtener tienda vendedor",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiYmRjMTk2ZDUzYzU0ZGEzODJiMGM2ODJlNjVkNDM3ZGJhOTEzOWQxNGQwNWUzMDJjZDBiYjc2ZjBkM2U0MzVhM2EzM2ViZjRhNzdlN2UxZGUiLCJpYXQiOjE3NDA2MDI2MjAuOTQxNTc2LCJuYmYiOjE3NDA2MDI2MjAuOTQxNTc5LCJleHAiOjE3NzIxMzg2MjAuOTM1NzU5LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.cQxWPGNtVoqmD_jZ1lWusUu2QRbtSrtHTpQgKwCEWH6v5yPqY3JDsH1jidV8a1_7CaXQ-2xPh9Qc2ybNUUc7jR3xb84Nx0Hq5ADy23OaQcTQQVyJnEzgqERGgefGnS8XE1_7kIgLVQaLlyzL9e88fRkONzKbe9yAU5DR-HuB812pdFEYfOaH8jCTTL1CqjOCjPvVjTVEGa3G6QA51R2uWGuGWUoplbyCWAvO2L_7dezBH871BKAySz0HLXdAdkr5Z-0vu0t1_qL1IhQlSERTMCbE2yznS9qfPh78hJFTLqmIvxtTvK6KbR3L1I56njYjz_ptjlF6qzH0rnFiPkFtXQDZOk_ZYFgj55B0pYUxgHPKZ2p1hTAe17Fws6rfgWMIUl9i1tcgWZcwih-kmQuIt4uQ3imVvCJXTSPtRtk_kaf_IrVTgByDbxDgeBWoVkLtA62u2KGmqd2B6IgdDJapa7ZY7uVNUXEIkvfaEaShxx7z17-_7vvSeQaRJPu8eWWgNuqysQD7rHMDxL2o8MW7vNxQLLnB776oUpSsI0AyvCvqtQf50qGqL6Ts8WNhWKLBqHsjwFLPA2IXcfAONdCok0u3S3-z7j1JSazTiZLbUjb4N-uYvGFiMKu_0v52WtYZ-mZeZ5YACmiNB_3dOJVGyMMZHA4hBqH8TkLME2nr794",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "id",
+							"value": "1",
+							"description": "contraseña",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/seller/store/get",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"seller",
+						"store",
+						"get"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Crear producto de tienda",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiYmRjMTk2ZDUzYzU0ZGEzODJiMGM2ODJlNjVkNDM3ZGJhOTEzOWQxNGQwNWUzMDJjZDBiYjc2ZjBkM2U0MzVhM2EzM2ViZjRhNzdlN2UxZGUiLCJpYXQiOjE3NDA2MDI2MjAuOTQxNTc2LCJuYmYiOjE3NDA2MDI2MjAuOTQxNTc5LCJleHAiOjE3NzIxMzg2MjAuOTM1NzU5LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.cQxWPGNtVoqmD_jZ1lWusUu2QRbtSrtHTpQgKwCEWH6v5yPqY3JDsH1jidV8a1_7CaXQ-2xPh9Qc2ybNUUc7jR3xb84Nx0Hq5ADy23OaQcTQQVyJnEzgqERGgefGnS8XE1_7kIgLVQaLlyzL9e88fRkONzKbe9yAU5DR-HuB812pdFEYfOaH8jCTTL1CqjOCjPvVjTVEGa3G6QA51R2uWGuGWUoplbyCWAvO2L_7dezBH871BKAySz0HLXdAdkr5Z-0vu0t1_qL1IhQlSERTMCbE2yznS9qfPh78hJFTLqmIvxtTvK6KbR3L1I56njYjz_ptjlF6qzH0rnFiPkFtXQDZOk_ZYFgj55B0pYUxgHPKZ2p1hTAe17Fws6rfgWMIUl9i1tcgWZcwih-kmQuIt4uQ3imVvCJXTSPtRtk_kaf_IrVTgByDbxDgeBWoVkLtA62u2KGmqd2B6IgdDJapa7ZY7uVNUXEIkvfaEaShxx7z17-_7vvSeQaRJPu8eWWgNuqysQD7rHMDxL2o8MW7vNxQLLnB776oUpSsI0AyvCvqtQf50qGqL6Ts8WNhWKLBqHsjwFLPA2IXcfAONdCok0u3S3-z7j1JSazTiZLbUjb4N-uYvGFiMKu_0v52WtYZ-mZeZ5YACmiNB_3dOJVGyMMZHA4hBqH8TkLME2nr794",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "store_id",
+							"value": "1",
+							"description": "id de la tienda ya creada",
+							"type": "text"
+						},
+						{
+							"key": "name",
+							"value": "Champu",
+							"type": "text"
+						},
+						{
+							"key": "price",
+							"value": "50.58",
+							"type": "text"
+						},
+						{
+							"key": "stock",
+							"value": "12",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/seller/product/create",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"seller",
+						"product",
+						"create"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Editar producto de tienda",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiYmRjMTk2ZDUzYzU0ZGEzODJiMGM2ODJlNjVkNDM3ZGJhOTEzOWQxNGQwNWUzMDJjZDBiYjc2ZjBkM2U0MzVhM2EzM2ViZjRhNzdlN2UxZGUiLCJpYXQiOjE3NDA2MDI2MjAuOTQxNTc2LCJuYmYiOjE3NDA2MDI2MjAuOTQxNTc5LCJleHAiOjE3NzIxMzg2MjAuOTM1NzU5LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.cQxWPGNtVoqmD_jZ1lWusUu2QRbtSrtHTpQgKwCEWH6v5yPqY3JDsH1jidV8a1_7CaXQ-2xPh9Qc2ybNUUc7jR3xb84Nx0Hq5ADy23OaQcTQQVyJnEzgqERGgefGnS8XE1_7kIgLVQaLlyzL9e88fRkONzKbe9yAU5DR-HuB812pdFEYfOaH8jCTTL1CqjOCjPvVjTVEGa3G6QA51R2uWGuGWUoplbyCWAvO2L_7dezBH871BKAySz0HLXdAdkr5Z-0vu0t1_qL1IhQlSERTMCbE2yznS9qfPh78hJFTLqmIvxtTvK6KbR3L1I56njYjz_ptjlF6qzH0rnFiPkFtXQDZOk_ZYFgj55B0pYUxgHPKZ2p1hTAe17Fws6rfgWMIUl9i1tcgWZcwih-kmQuIt4uQ3imVvCJXTSPtRtk_kaf_IrVTgByDbxDgeBWoVkLtA62u2KGmqd2B6IgdDJapa7ZY7uVNUXEIkvfaEaShxx7z17-_7vvSeQaRJPu8eWWgNuqysQD7rHMDxL2o8MW7vNxQLLnB776oUpSsI0AyvCvqtQf50qGqL6Ts8WNhWKLBqHsjwFLPA2IXcfAONdCok0u3S3-z7j1JSazTiZLbUjb4N-uYvGFiMKu_0v52WtYZ-mZeZ5YACmiNB_3dOJVGyMMZHA4hBqH8TkLME2nr794",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "id",
+							"value": "1",
+							"description": "contraseña",
+							"type": "text"
+						},
+						{
+							"key": "store_id",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "name",
+							"value": "Champu",
+							"type": "text"
+						},
+						{
+							"key": "price",
+							"value": "10",
+							"type": "text"
+						},
+						{
+							"key": "stock",
+							"value": "10",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/seller/product/update",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"seller",
+						"product",
+						"update"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Eliminar producto de tienda",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiYmRjMTk2ZDUzYzU0ZGEzODJiMGM2ODJlNjVkNDM3ZGJhOTEzOWQxNGQwNWUzMDJjZDBiYjc2ZjBkM2U0MzVhM2EzM2ViZjRhNzdlN2UxZGUiLCJpYXQiOjE3NDA2MDI2MjAuOTQxNTc2LCJuYmYiOjE3NDA2MDI2MjAuOTQxNTc5LCJleHAiOjE3NzIxMzg2MjAuOTM1NzU5LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.cQxWPGNtVoqmD_jZ1lWusUu2QRbtSrtHTpQgKwCEWH6v5yPqY3JDsH1jidV8a1_7CaXQ-2xPh9Qc2ybNUUc7jR3xb84Nx0Hq5ADy23OaQcTQQVyJnEzgqERGgefGnS8XE1_7kIgLVQaLlyzL9e88fRkONzKbe9yAU5DR-HuB812pdFEYfOaH8jCTTL1CqjOCjPvVjTVEGa3G6QA51R2uWGuGWUoplbyCWAvO2L_7dezBH871BKAySz0HLXdAdkr5Z-0vu0t1_qL1IhQlSERTMCbE2yznS9qfPh78hJFTLqmIvxtTvK6KbR3L1I56njYjz_ptjlF6qzH0rnFiPkFtXQDZOk_ZYFgj55B0pYUxgHPKZ2p1hTAe17Fws6rfgWMIUl9i1tcgWZcwih-kmQuIt4uQ3imVvCJXTSPtRtk_kaf_IrVTgByDbxDgeBWoVkLtA62u2KGmqd2B6IgdDJapa7ZY7uVNUXEIkvfaEaShxx7z17-_7vvSeQaRJPu8eWWgNuqysQD7rHMDxL2o8MW7vNxQLLnB776oUpSsI0AyvCvqtQf50qGqL6Ts8WNhWKLBqHsjwFLPA2IXcfAONdCok0u3S3-z7j1JSazTiZLbUjb4N-uYvGFiMKu_0v52WtYZ-mZeZ5YACmiNB_3dOJVGyMMZHA4hBqH8TkLME2nr794",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "id",
+							"value": "1",
+							"description": "contraseña",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/seller/product/delete",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"seller",
+						"product",
+						"delete"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar producto de tienda",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiYmRjMTk2ZDUzYzU0ZGEzODJiMGM2ODJlNjVkNDM3ZGJhOTEzOWQxNGQwNWUzMDJjZDBiYjc2ZjBkM2U0MzVhM2EzM2ViZjRhNzdlN2UxZGUiLCJpYXQiOjE3NDA2MDI2MjAuOTQxNTc2LCJuYmYiOjE3NDA2MDI2MjAuOTQxNTc5LCJleHAiOjE3NzIxMzg2MjAuOTM1NzU5LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.cQxWPGNtVoqmD_jZ1lWusUu2QRbtSrtHTpQgKwCEWH6v5yPqY3JDsH1jidV8a1_7CaXQ-2xPh9Qc2ybNUUc7jR3xb84Nx0Hq5ADy23OaQcTQQVyJnEzgqERGgefGnS8XE1_7kIgLVQaLlyzL9e88fRkONzKbe9yAU5DR-HuB812pdFEYfOaH8jCTTL1CqjOCjPvVjTVEGa3G6QA51R2uWGuGWUoplbyCWAvO2L_7dezBH871BKAySz0HLXdAdkr5Z-0vu0t1_qL1IhQlSERTMCbE2yznS9qfPh78hJFTLqmIvxtTvK6KbR3L1I56njYjz_ptjlF6qzH0rnFiPkFtXQDZOk_ZYFgj55B0pYUxgHPKZ2p1hTAe17Fws6rfgWMIUl9i1tcgWZcwih-kmQuIt4uQ3imVvCJXTSPtRtk_kaf_IrVTgByDbxDgeBWoVkLtA62u2KGmqd2B6IgdDJapa7ZY7uVNUXEIkvfaEaShxx7z17-_7vvSeQaRJPu8eWWgNuqysQD7rHMDxL2o8MW7vNxQLLnB776oUpSsI0AyvCvqtQf50qGqL6Ts8WNhWKLBqHsjwFLPA2IXcfAONdCok0u3S3-z7j1JSazTiZLbUjb4N-uYvGFiMKu_0v52WtYZ-mZeZ5YACmiNB_3dOJVGyMMZHA4hBqH8TkLME2nr794",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "store_id",
+							"value": "1",
+							"description": "contraseña",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/seller/product/list",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"seller",
+						"product",
+						"list"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Obtener producto de tienda",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiYmRjMTk2ZDUzYzU0ZGEzODJiMGM2ODJlNjVkNDM3ZGJhOTEzOWQxNGQwNWUzMDJjZDBiYjc2ZjBkM2U0MzVhM2EzM2ViZjRhNzdlN2UxZGUiLCJpYXQiOjE3NDA2MDI2MjAuOTQxNTc2LCJuYmYiOjE3NDA2MDI2MjAuOTQxNTc5LCJleHAiOjE3NzIxMzg2MjAuOTM1NzU5LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.cQxWPGNtVoqmD_jZ1lWusUu2QRbtSrtHTpQgKwCEWH6v5yPqY3JDsH1jidV8a1_7CaXQ-2xPh9Qc2ybNUUc7jR3xb84Nx0Hq5ADy23OaQcTQQVyJnEzgqERGgefGnS8XE1_7kIgLVQaLlyzL9e88fRkONzKbe9yAU5DR-HuB812pdFEYfOaH8jCTTL1CqjOCjPvVjTVEGa3G6QA51R2uWGuGWUoplbyCWAvO2L_7dezBH871BKAySz0HLXdAdkr5Z-0vu0t1_qL1IhQlSERTMCbE2yznS9qfPh78hJFTLqmIvxtTvK6KbR3L1I56njYjz_ptjlF6qzH0rnFiPkFtXQDZOk_ZYFgj55B0pYUxgHPKZ2p1hTAe17Fws6rfgWMIUl9i1tcgWZcwih-kmQuIt4uQ3imVvCJXTSPtRtk_kaf_IrVTgByDbxDgeBWoVkLtA62u2KGmqd2B6IgdDJapa7ZY7uVNUXEIkvfaEaShxx7z17-_7vvSeQaRJPu8eWWgNuqysQD7rHMDxL2o8MW7vNxQLLnB776oUpSsI0AyvCvqtQf50qGqL6Ts8WNhWKLBqHsjwFLPA2IXcfAONdCok0u3S3-z7j1JSazTiZLbUjb4N-uYvGFiMKu_0v52WtYZ-mZeZ5YACmiNB_3dOJVGyMMZHA4hBqH8TkLME2nr794",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "id",
+							"value": "1",
+							"description": "contraseña",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/seller/product/get",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"seller",
+						"product",
+						"get"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Agregar al carrito para los clientes",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiZmM5ODFkODQ4NzdlYTFhNzZkNTE1ZjgzY2VmNzI4ZjY5YjZjYTk3MDQwZTc0Mjc4YzAxMDU0MDI3OGYyMzJjNWIxNWI0NWU4ZjE0YjhkYWQiLCJpYXQiOjE3NDA2MTEwMjYuNTYyNjc4LCJuYmYiOjE3NDA2MTEwMjYuNTYyNjgxLCJleHAiOjE3NzIxNDcwMjYuNTU1NTE4LCJzdWIiOiIyIiwic2NvcGVzIjpbXX0.L5zlgGWCDvkayZ-LFF5Hu8mWJE7OuvWQOaVZxI976G-rxIsYgbDrgJl4gQfbvWUW5e354DJkWhnSIsbUMatNw5-d5uFc4AvyrAICUOC_KbMsCNC_4sKqgWlkHWLe9__AFd-Dd3t4-ijRdxAPVxsOv1gBVM72o8hzGVyqHfgdR38uUFKAawBuk_5fuowbObNoVeO1EnSdYog1YXxKof-o6n8Lic2jQ4u6nX_74LLlipA-24qv2YECA5gyywLqkHJbleYDnZWMsykURLyuR5SK6AeQ9GXdaB05xYp0H0kRvPsZYGs7Ysz_YxUN5SN9nN68labDgJFUaymAaOpJ7N1vqNh2_l6NZld0eHifQad89uPbSjrS2PWrGvYJiHUUy1c49HG0TNba-u_luEIXhp9np8gJOz_9WtyQQdUEIp86m39inAVQPzElAsfuGQM1uWmkEzEbvn3bkfUV_IEM4yTkXbbdi95iCkKc5tdIJa657x2QU-Anw6wcJNrSztkV5i15eOYmeaqGbznGm1HmKGSLlaTynouByEnU8yL_qYqCatsqJ7Mrj-wAW0bw4gevb4L6XD9gzHrtGliC5GR7-vfljzk3xS3l39wz71wjFanFXkXL-243LlV0COq027hoprEZjImjBTmuSqXGHfmt9VOdI0SqVYTXJekywZZBotQloAQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "user_id",
+							"value": "1",
+							"description": "contraseña",
+							"type": "text"
+						},
+						{
+							"key": "product_id",
+							"value": "2",
+							"type": "text"
+						},
+						{
+							"key": "quantity",
+							"value": "2",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/client/cart",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"client",
+						"cart"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Eliminar productos de carrito cliente",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiYmRjMTk2ZDUzYzU0ZGEzODJiMGM2ODJlNjVkNDM3ZGJhOTEzOWQxNGQwNWUzMDJjZDBiYjc2ZjBkM2U0MzVhM2EzM2ViZjRhNzdlN2UxZGUiLCJpYXQiOjE3NDA2MDI2MjAuOTQxNTc2LCJuYmYiOjE3NDA2MDI2MjAuOTQxNTc5LCJleHAiOjE3NzIxMzg2MjAuOTM1NzU5LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.cQxWPGNtVoqmD_jZ1lWusUu2QRbtSrtHTpQgKwCEWH6v5yPqY3JDsH1jidV8a1_7CaXQ-2xPh9Qc2ybNUUc7jR3xb84Nx0Hq5ADy23OaQcTQQVyJnEzgqERGgefGnS8XE1_7kIgLVQaLlyzL9e88fRkONzKbe9yAU5DR-HuB812pdFEYfOaH8jCTTL1CqjOCjPvVjTVEGa3G6QA51R2uWGuGWUoplbyCWAvO2L_7dezBH871BKAySz0HLXdAdkr5Z-0vu0t1_qL1IhQlSERTMCbE2yznS9qfPh78hJFTLqmIvxtTvK6KbR3L1I56njYjz_ptjlF6qzH0rnFiPkFtXQDZOk_ZYFgj55B0pYUxgHPKZ2p1hTAe17Fws6rfgWMIUl9i1tcgWZcwih-kmQuIt4uQ3imVvCJXTSPtRtk_kaf_IrVTgByDbxDgeBWoVkLtA62u2KGmqd2B6IgdDJapa7ZY7uVNUXEIkvfaEaShxx7z17-_7vvSeQaRJPu8eWWgNuqysQD7rHMDxL2o8MW7vNxQLLnB776oUpSsI0AyvCvqtQf50qGqL6Ts8WNhWKLBqHsjwFLPA2IXcfAONdCok0u3S3-z7j1JSazTiZLbUjb4N-uYvGFiMKu_0v52WtYZ-mZeZ5YACmiNB_3dOJVGyMMZHA4hBqH8TkLME2nr794",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "user_id",
+							"value": "1",
+							"description": "contraseña",
+							"type": "text"
+						},
+						{
+							"key": "product_id",
+							"value": "1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/client/remove",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"client",
+						"remove"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Finalizar compra",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiZmM5ODFkODQ4NzdlYTFhNzZkNTE1ZjgzY2VmNzI4ZjY5YjZjYTk3MDQwZTc0Mjc4YzAxMDU0MDI3OGYyMzJjNWIxNWI0NWU4ZjE0YjhkYWQiLCJpYXQiOjE3NDA2MTEwMjYuNTYyNjc4LCJuYmYiOjE3NDA2MTEwMjYuNTYyNjgxLCJleHAiOjE3NzIxNDcwMjYuNTU1NTE4LCJzdWIiOiIyIiwic2NvcGVzIjpbXX0.L5zlgGWCDvkayZ-LFF5Hu8mWJE7OuvWQOaVZxI976G-rxIsYgbDrgJl4gQfbvWUW5e354DJkWhnSIsbUMatNw5-d5uFc4AvyrAICUOC_KbMsCNC_4sKqgWlkHWLe9__AFd-Dd3t4-ijRdxAPVxsOv1gBVM72o8hzGVyqHfgdR38uUFKAawBuk_5fuowbObNoVeO1EnSdYog1YXxKof-o6n8Lic2jQ4u6nX_74LLlipA-24qv2YECA5gyywLqkHJbleYDnZWMsykURLyuR5SK6AeQ9GXdaB05xYp0H0kRvPsZYGs7Ysz_YxUN5SN9nN68labDgJFUaymAaOpJ7N1vqNh2_l6NZld0eHifQad89uPbSjrS2PWrGvYJiHUUy1c49HG0TNba-u_luEIXhp9np8gJOz_9WtyQQdUEIp86m39inAVQPzElAsfuGQM1uWmkEzEbvn3bkfUV_IEM4yTkXbbdi95iCkKc5tdIJa657x2QU-Anw6wcJNrSztkV5i15eOYmeaqGbznGm1HmKGSLlaTynouByEnU8yL_qYqCatsqJ7Mrj-wAW0bw4gevb4L6XD9gzHrtGliC5GR7-vfljzk3xS3l39wz71wjFanFXkXL-243LlV0COq027hoprEZjImjBTmuSqXGHfmt9VOdI0SqVYTXJekywZZBotQloAQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "user_id",
+							"value": "2",
+							"description": "contraseña",
+							"type": "text"
+						},
+						{
+							"key": "cart_id",
+							"value": "1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/client/checkout",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"client",
+						"checkout"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Obtener historial de compras",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiZmM5ODFkODQ4NzdlYTFhNzZkNTE1ZjgzY2VmNzI4ZjY5YjZjYTk3MDQwZTc0Mjc4YzAxMDU0MDI3OGYyMzJjNWIxNWI0NWU4ZjE0YjhkYWQiLCJpYXQiOjE3NDA2MTEwMjYuNTYyNjc4LCJuYmYiOjE3NDA2MTEwMjYuNTYyNjgxLCJleHAiOjE3NzIxNDcwMjYuNTU1NTE4LCJzdWIiOiIyIiwic2NvcGVzIjpbXX0.L5zlgGWCDvkayZ-LFF5Hu8mWJE7OuvWQOaVZxI976G-rxIsYgbDrgJl4gQfbvWUW5e354DJkWhnSIsbUMatNw5-d5uFc4AvyrAICUOC_KbMsCNC_4sKqgWlkHWLe9__AFd-Dd3t4-ijRdxAPVxsOv1gBVM72o8hzGVyqHfgdR38uUFKAawBuk_5fuowbObNoVeO1EnSdYog1YXxKof-o6n8Lic2jQ4u6nX_74LLlipA-24qv2YECA5gyywLqkHJbleYDnZWMsykURLyuR5SK6AeQ9GXdaB05xYp0H0kRvPsZYGs7Ysz_YxUN5SN9nN68labDgJFUaymAaOpJ7N1vqNh2_l6NZld0eHifQad89uPbSjrS2PWrGvYJiHUUy1c49HG0TNba-u_luEIXhp9np8gJOz_9WtyQQdUEIp86m39inAVQPzElAsfuGQM1uWmkEzEbvn3bkfUV_IEM4yTkXbbdi95iCkKc5tdIJa657x2QU-Anw6wcJNrSztkV5i15eOYmeaqGbznGm1HmKGSLlaTynouByEnU8yL_qYqCatsqJ7Mrj-wAW0bw4gevb4L6XD9gzHrtGliC5GR7-vfljzk3xS3l39wz71wjFanFXkXL-243LlV0COq027hoprEZjImjBTmuSqXGHfmt9VOdI0SqVYTXJekywZZBotQloAQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "user_id",
+							"value": "2",
+							"description": "contraseña",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/client/historical",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"client",
+						"historical"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Obtener historial de ventas por vendedor de tienda",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiNjM4YjlmNTA0MWYwNGI0ZjgwNWFiMjNhNDhkM2QwODBmMzA2MTQwODhmMmY3OTJiZDUwNzEzOTdlY2I3NThmNjZiOTk4NDkwNjhkMzc3MGMiLCJpYXQiOjE3NDA2MTQ3NjcuNjA0OTE5LCJuYmYiOjE3NDA2MTQ3NjcuNjA0OTIyLCJleHAiOjE3NzIxNTA3NjcuNTk5NDk1LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.RqthbPgkxdK83SXzop5yMx4QAe0ej7Hl9xr2mwn8_1Rgca6TVst0F6JMHeU56LUZmx_Ba96q4Q5yd3441cL0KboUmBXIyHZzVM7fpwEfZcz1Y7EAHjoG-GOMh2HbYv17VP6_FRXRksmZZmAYiqR0ep6Jj-zK00LfayNiUzoiufrxU1j6__RrdM342GL6z0gv4QGxdEarl_OjeeAE6uUB3KNAJCJmydATaRzE3TO6AEPGdrxAi5kZIVPe5VqH3yEPcnE_A_fyBYXvF0qFKzQKvdkZdBcbpMUdvwqmG9LgP0n7M-9NMCeeBnHaRHTGX9Oh_6c4oxFQUoNnwwx1JUckKTXXQX6mbvBr-wWhAnXd8P2sZKfav-Ovv0o_CcMNtzYgVA5mWCiMvzW07yg7esT0hGxXbUvBJbMBEgelsFGGEtZsxzcj1w2c4HwADrfNXKD3WB_rse5OIW8JNG-ZOXGYKcfOKQIlp95XFcrrMiZDFzY9F9Z9AZZXQPF3IBkGxnqU5Ulh6OyI24IV0z3meG8g2Na-HIcPLcfZU2CtAAIAXU8o3_loPUXzMMmhy9Maxm9C_z5X-ehjf_66YIQ19NzM42M6xW0noHtCjspVkwkWPHBkGN8dF87sAgHxPV716mGOOtNEGKFYIS2Ca1N3OPdmTfgSDGGQirebTN8gLoEcccY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "store_id",
+							"value": "1",
+							"description": "contraseña",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/seller/historical",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"seller",
+						"historical"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiYmRjMTk2ZDUzYzU0ZGEzODJiMGM2ODJlNjVkNDM3ZGJhOTEzOWQxNGQwNWUzMDJjZDBiYjc2ZjBkM2U0MzVhM2EzM2ViZjRhNzdlN2UxZGUiLCJpYXQiOjE3NDA2MDI2MjAuOTQxNTc2LCJuYmYiOjE3NDA2MDI2MjAuOTQxNTc5LCJleHAiOjE3NzIxMzg2MjAuOTM1NzU5LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.cQxWPGNtVoqmD_jZ1lWusUu2QRbtSrtHTpQgKwCEWH6v5yPqY3JDsH1jidV8a1_7CaXQ-2xPh9Qc2ybNUUc7jR3xb84Nx0Hq5ADy23OaQcTQQVyJnEzgqERGgefGnS8XE1_7kIgLVQaLlyzL9e88fRkONzKbe9yAU5DR-HuB812pdFEYfOaH8jCTTL1CqjOCjPvVjTVEGa3G6QA51R2uWGuGWUoplbyCWAvO2L_7dezBH871BKAySz0HLXdAdkr5Z-0vu0t1_qL1IhQlSERTMCbE2yznS9qfPh78hJFTLqmIvxtTvK6KbR3L1I56njYjz_ptjlF6qzH0rnFiPkFtXQDZOk_ZYFgj55B0pYUxgHPKZ2p1hTAe17Fws6rfgWMIUl9i1tcgWZcwih-kmQuIt4uQ3imVvCJXTSPtRtk_kaf_IrVTgByDbxDgeBWoVkLtA62u2KGmqd2B6IgdDJapa7ZY7uVNUXEIkvfaEaShxx7z17-_7vvSeQaRJPu8eWWgNuqysQD7rHMDxL2o8MW7vNxQLLnB776oUpSsI0AyvCvqtQf50qGqL6Ts8WNhWKLBqHsjwFLPA2IXcfAONdCok0u3S3-z7j1JSazTiZLbUjb4N-uYvGFiMKu_0v52WtYZ-mZeZ5YACmiNB_3dOJVGyMMZHA4hBqH8TkLME2nr794",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
